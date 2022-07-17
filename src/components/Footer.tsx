@@ -25,7 +25,7 @@ export default function Footer({ onOpen, ...props }: { onOpen: () => void }) {
     if (validateEmail(value))
       (async () => {
         const rawResponse = await fetch(
-          "http://52.203.40.196/api/subscribers",
+          "https://foodiesnews.tk/api/subscribers",
           {
             method: "POST",
             headers: {

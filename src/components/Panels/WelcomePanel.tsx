@@ -30,7 +30,7 @@ export default function WelcomePanel({
     if (validateEmail(value))
       (async () => {
         const rawResponse = await fetch(
-          "http://52.203.40.196/api/subscribers",
+          "https://foodiesnews.tk/api/subscribers",
           {
             method: "POST",
             headers: {
