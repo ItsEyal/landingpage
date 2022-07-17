@@ -31,13 +31,14 @@ export default function Footer({ onOpen, ...props }: { onOpen: () => void }) {
             headers: {
               Accept: "application/json, text/plain",
               ContentType: "application/json",
+              Authorization: `Basic ${Buffer.from(
+                `listmonk:listmonk`,
+                "base64"
+              )}`,
             },
             body: JSON.stringify({
               email: value,
-              // name: "test name",
-              status: "enabled",
-              lists: [1],
-              attribs: { country: "" },
+              name: "",
             }),
           }
         );

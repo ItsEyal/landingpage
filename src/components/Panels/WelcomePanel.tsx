@@ -36,12 +36,14 @@ export default function WelcomePanel({
             headers: {
               Accept: "application/json, text/plain",
               ContentType: "application/json",
+              Authorization: `Basic ${Buffer.from(
+                `listmonk:listmonk`,
+                "base64"
+              )}`,
             },
             body: JSON.stringify({
               email: value,
-              status: "enabled",
-              lists: [1],
-              attribs: { country: "" },
+              name: "",
             }),
           }
         );
