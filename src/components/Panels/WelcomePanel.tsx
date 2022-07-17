@@ -30,7 +30,7 @@ export default function WelcomePanel({
     if (validateEmail(value))
       (async () => {
         const rawResponse = await fetch(
-          "http://localhost:9000/api/subscribers",
+          "http://52.203.40.196/api/subscribers",
           {
             method: "POST",
             headers: {
