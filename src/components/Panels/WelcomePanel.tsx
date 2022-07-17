@@ -34,11 +34,11 @@ export default function WelcomePanel({
           {
             method: "POST",
             headers: {
+              Accept: "application/json, text/plain",
               ContentType: "application/json",
             },
             body: JSON.stringify({
               email: value,
-              // name: "test name",
               status: "enabled",
               lists: [1],
               attribs: { country: "" },

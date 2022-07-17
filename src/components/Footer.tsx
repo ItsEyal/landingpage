@@ -29,6 +29,7 @@ export default function Footer({ onOpen, ...props }: { onOpen: () => void }) {
           {
             method: "POST",
             headers: {
+              Accept: "application/json, text/plain",
               ContentType: "application/json",
             },
             body: JSON.stringify({
